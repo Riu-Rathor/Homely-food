@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import foodYummy from "../assets/FoodYummy.png";
+import homelyFood from "../assets/homely-food.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 export default function Navbar() {
@@ -11,7 +11,7 @@ export default function Navbar() {
     <>
       <Nav>
         <div className="brand">
-          <img src={foodYummy} alt="Icon" />
+          <img src={homelyFood} alt="Icon" />
           <div className="toggle">
             {navbarState ? (
               <VscChromeClose onClick={() => setNavbarState(false)} />
@@ -38,13 +38,13 @@ export default function Navbar() {
             <a href="#portfolio">Portfolio</a>
           </li>
           <li>
-            <a href="#testimonials">Testimonials</a>
+            <a href="#testimonals">Testimonials</a>
           </li>
           <li>
             <a href="#products">Products</a>
           </li>
           <li>
-            <a href="#newsletter">Newsletter</a>
+            <a href="#subscribe">Subscribe</a>
           </li>
         </ul>
       </Nav>
@@ -70,8 +70,8 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#testimonials" onClick={() => setNavbarState(false)}>
-              Testimonials
+            <a href="#testimonals" onClick={() => setNavbarState(false)}>
+              Testimonalsls
             </a>
           </li>
           <li>
@@ -80,8 +80,8 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#newsletter" onClick={() => setNavbarState(false)}>
-              Newsletter
+            <a href="#subscribe" onClick={() => setNavbarState(false)}>
+              Subscribe
             </a>
           </li>
         </ul>
@@ -99,6 +99,7 @@ const Nav = styled.nav`
     img {
       margin-top: 1rem;
       cursor: pointer;
+      width: 7rem;
     }
     .toggle {
       display: none;
